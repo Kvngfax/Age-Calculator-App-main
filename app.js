@@ -66,7 +66,7 @@ function validate() {
 
     if (input === yearInp) {
       const yearValue = parseInt(value);
-      if (yearValue > currentYear || yearValue < 1) {
+      if (yearValue > currentYear ) {
         yearLabel.style.color = "hsl(0, 100%, 67%)";
         input.style.borderColor = "red";
         parent.querySelector("small").innerText = "Must be a valid year";
