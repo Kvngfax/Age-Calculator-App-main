@@ -71,7 +71,7 @@ function validate() {
         input.style.borderColor = "red";
         parent.querySelector("small").innerText = "Must be in the past";
         validator = false;
-      }Else if (yearValue < 1 ) {
+      } else if (yearValue < 1 ) {
         yearLabel.style.color = "hsl(0, 100%, 67%)";
         input.style.borderColor = "red";
         parent.querySelector("small").innerText = "Must be valid year";
