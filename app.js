@@ -66,17 +66,12 @@ function validate() {
 
     if (input === yearInp) {
       const yearValue = parseInt(value);
-      if (yearValue > currentYear) {
+      if (yearValue > currentYear || yearValue < 1) {
         yearLabel.style.color = "hsl(0, 100%, 67%)";
         input.style.borderColor = "red";
-        parent.querySelector("small").innerText = "Must be in the past";
+        parent.querySelector("small").innerText = "Must be a valid year";
         validator = false;
-      } else if (yearValue < 1 ) {
-        yearLabel.style.color = "hsl(0, 100%, 67%)";
-        input.style.borderColor = "red";
-        parent.querySelector("small").innerText = "Must be valid year";
-        validator = false;
-      }  else {
+      } else {
         yearLabel.style.color = "black";
       }
     }
